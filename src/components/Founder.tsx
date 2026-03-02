@@ -1,6 +1,8 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 
+const TARS_URL = 'https://tars-ai-blush.vercel.app/';
+
 function AnimatedCounter({ target, label }: { target: string; label: string }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -40,8 +42,10 @@ export default function Founder() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="section-padding relative" ref={ref}>
-      <div className="max-w-5xl mx-auto">
+    <section id="founder" className="section-padding relative" ref={ref}>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-secondary/4 blur-[180px]" />
+
+      <div className="max-w-5xl mx-auto relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -49,42 +53,52 @@ export default function Founder() {
           className="text-center mb-16"
         >
           <p className="text-primary font-display text-sm tracking-[0.3em] uppercase mb-4">Leadership</p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold">
+          <h2 className="font-display text-4xl md:text-6xl font-bold tracking-tight">
             Built by <span className="text-gradient">Vision.</span>
           </h2>
         </motion.div>
 
         <motion.div
-          className="glass-panel gradient-border p-8 md:p-12 glow-purple max-w-3xl mx-auto text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          className="glass-panel gradient-border p-8 md:p-12 max-w-3xl mx-auto text-center"
+          initial={{ opacity: 0, y: 30, scale: 0.95 }}
+          animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
+          style={{ boxShadow: '0 0 60px hsl(260 80% 55% / 0.15), 0 0 120px hsl(210 100% 56% / 0.08)' }}
         >
           {/* Avatar */}
           <motion.div
-            className="w-28 h-28 mx-auto mb-6 rounded-full border-2 border-primary/40 bg-muted flex items-center justify-center animate-float"
-            style={{ boxShadow: '0 0 40px hsl(210 100% 56% / 0.3)' }}
+            className="w-28 h-28 mx-auto mb-8 rounded-full border-2 border-primary/30 bg-muted/50 flex items-center justify-center relative"
+            animate={{ y: [0, -6, 0] }}
+            transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
+            style={{ boxShadow: '0 0 50px hsl(210 100% 56% / 0.3), inset 0 0 30px hsl(210 100% 56% / 0.1)' }}
           >
             <span className="font-display text-3xl font-bold text-primary">ML</span>
+            {/* Orbiting dot */}
+            <motion.div
+              className="absolute w-2 h-2 rounded-full bg-accent"
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 6, ease: 'linear' }}
+              style={{ top: '5%', left: '50%', transformOrigin: '0 45px', boxShadow: '0 0 10px hsl(180 100% 50% / 0.6)' }}
+            />
           </motion.div>
 
           <h3 className="font-display text-2xl font-bold text-foreground mb-1">Mohidul Alom Laskar</h3>
-          <p className="text-primary text-sm font-display tracking-wide mb-2">Founder & AI Architect</p>
-          <p className="text-muted-foreground text-xs mb-6 font-display tracking-wider uppercase">Creator of TARS AI</p>
+          <p className="text-primary text-sm font-display tracking-wide mb-1">Founder & AI Architect</p>
+          <p className="text-muted-foreground text-xs mb-8 font-display tracking-[0.2em] uppercase">Creator of TARS AI</p>
 
-          <p className="text-muted-foreground leading-relaxed text-sm md:text-base max-w-xl mx-auto mb-8">
+          <p className="text-muted-foreground leading-relaxed text-sm md:text-base max-w-xl mx-auto mb-10">
             Mohidul Alom Laskar is the founder of Tars Labs and the architect behind TARS AI. With a mission to redefine artificial intelligence, he designs and engineers autonomous systems that think, build, and evolve. Every layer of TARS AI — from infrastructure to experience — is developed under his vision.
           </p>
 
           <div className="flex items-center justify-center gap-4">
-            <button className="btn-glow text-primary-foreground text-sm">Connect</button>
-            <button className="btn-outline-glow text-sm">View Projects</button>
+            <a href={TARS_URL} target="_blank" rel="noopener noreferrer" className="btn-glow text-primary-foreground text-sm">Connect</a>
+            <a href={TARS_URL} target="_blank" rel="noopener noreferrer" className="btn-outline-glow text-sm">View Projects</a>
           </div>
         </motion.div>
 
         {/* Counters */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
