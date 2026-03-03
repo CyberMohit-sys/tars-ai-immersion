@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Suspense, lazy } from 'react';
+import heroBg from '@/assets/hero-bg.jpg';
 
 const TARS_URL = 'https://tars-ai-blush.vercel.app/';
 const AISphere = lazy(() => import('./AISphere'));
@@ -11,9 +12,14 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated gradient mesh bg */}
+      {/* Cinematic background image */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/30" />
+        <img src={heroBg} alt="" className="w-full h-full object-cover opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+      </div>
+
+      {/* Animated gradient mesh */}
+      <div className="absolute inset-0">
         <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full bg-primary/8 blur-[150px]"
           animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.7, 0.4] }}
@@ -23,11 +29,6 @@ export default function Hero() {
           className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-secondary/6 blur-[120px]"
           animate={{ scale: [1.1, 1, 1.1], x: [0, 30, 0], y: [0, -20, 0] }}
           transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] rounded-full bg-accent/4 blur-[100px]"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut', delay: 2 }}
         />
       </div>
 
