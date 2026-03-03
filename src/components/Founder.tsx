@@ -91,8 +91,8 @@ export default function Founder() {
           </p>
 
           <div className="flex items-center justify-center gap-4">
-            <a href={TARS_URL} target="_blank" rel="noopener noreferrer" className="btn-glow text-primary-foreground text-sm">Connect</a>
-            <a href={TARS_URL} target="_blank" rel="noopener noreferrer" className="btn-outline-glow text-sm">View Projects</a>
+            <a href="https://in.linkedin.com/in/mohidul-alom-laskar-09626b320" target="_blank" rel="noopener noreferrer" className="btn-glow text-primary-foreground text-sm">Connect</a>
+            <a href="https://github.com/CyberMohit-sys" target="_blank" rel="noopener noreferrer" className="btn-outline-glow text-sm">View Projects</a>
           </div>
         </motion.div>
 
