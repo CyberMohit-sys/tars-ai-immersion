@@ -7,17 +7,21 @@ const footerLinks = [
   { label: 'Products', items: [
     { label: 'TARS AI', href: 'https://tars-ai-blush.vercel.app/', external: true },
     { label: 'TARS Vision', href: 'https://tarsvision.vercel.app/', external: true },
+    { label: 'Lifecare AI', href: 'https://lifecareai-health-guardian.vercel.app/', external: true },
+    { label: 'Models', href: '/models' },
     { label: 'Pricing', href: '/pricing' },
   ]},
-  { label: 'Resources', items: [
+  { label: 'Developers', items: [
     { label: 'Documentation', href: '/docs' },
+    { label: 'API Playground', href: '/playground' },
     { label: 'Research', href: '/research' },
     { label: 'Blog', href: '/blog' },
   ]},
   { label: 'Company', items: [
     { label: 'About', href: '/company' },
     { label: 'Solutions', href: '/solutions' },
-    { label: 'Careers', href: '/company' },
+    { label: 'Security', href: '/security' },
+    { label: 'Status', href: '/status' },
   ]},
 ];
 
@@ -66,10 +70,10 @@ export default function Footer() {
             © 2026 TarsLabs. Founded by Mohidul Alom Laskar.
           </p>
           <div className="flex gap-4 text-xs text-muted-foreground">
-            <span className="hover:text-primary cursor-pointer transition-colors">Privacy</span>
-            <span className="hover:text-primary cursor-pointer transition-colors">Terms</span>
-            <span className="hover:text-primary cursor-pointer transition-colors">Security</span>
-            <span className="hover:text-primary cursor-pointer transition-colors">Status</span>
+            <Link to="/terms" className="hover:text-primary transition-colors">Privacy</Link>
+            <Link to="/terms" className="hover:text-primary transition-colors">Terms</Link>
+            <Link to="/security" className="hover:text-primary transition-colors">Security</Link>
+            <Link to="/status" className="hover:text-primary transition-colors">Status</Link>
           </div>
         </div>
       </div>

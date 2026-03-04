@@ -15,6 +15,11 @@ import Solutions from "./pages/Solutions";
 import Company from "./pages/Company";
 import Blog from "./pages/Blog";
 import Pricing from "./pages/Pricing";
+import ApiPlayground from "./pages/ApiPlayground";
+import Models from "./pages/Models";
+import Status from "./pages/Status";
+import Security from "./pages/Security";
+import Terms from "./pages/Terms";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +41,11 @@ const App = () => (
               <Route path="/company" element={<Company />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/pricing" element={<Pricing />} />
+              <Route path="/playground" element={<ApiPlayground />} />
+              <Route path="/models" element={<Models />} />
+              <Route path="/status" element={<Status />} />
+              <Route path="/security" element={<Security />} />
+              <Route path="/terms" element={<Terms />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>

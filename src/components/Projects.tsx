@@ -4,6 +4,7 @@ import { ExternalLink, Eye } from 'lucide-react';
 
 const TARS_URL = 'https://tars-ai-blush.vercel.app/';
 const TARSVISION_URL = 'https://tarsvision.vercel.app/';
+const LIFECARE_URL = 'https://lifecareai-health-guardian.vercel.app/';
 const GITHUB_URL = 'https://github.com/CyberMohit-sys';
 
 const projects = [
@@ -24,7 +25,7 @@ const projects = [
   {
     title: 'Lifecare AI',
     desc: 'AI-powered healthcare intelligence platform for diagnostics, patient analysis, and medical research automation.',
-    link: '#',
+    link: LIFECARE_URL,
     tag: 'Healthcare AI',
     showSource: false,
   },
