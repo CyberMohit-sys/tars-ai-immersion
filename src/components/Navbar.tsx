@@ -14,12 +14,19 @@ const navItems = [
     children: [
       { label: 'TARS AI', href: TARS_URL, external: true },
       { label: 'TARS Vision', href: 'https://tarsvision.vercel.app/', external: true },
-      { label: 'API Platform', href: '/docs' },
+      { label: 'Lifecare AI', href: 'https://lifecareai-health-guardian.vercel.app/', external: true },
+      { label: 'Models', href: '/models' },
       { label: 'Pricing', href: '/pricing' },
     ],
   },
   { label: 'Research', href: '/research' },
-  { label: 'Docs', href: '/docs' },
+  {
+    label: 'Developers',
+    children: [
+      { label: 'Documentation', href: '/docs' },
+      { label: 'API Playground', href: '/playground' },
+    ],
+  },
   { label: 'Solutions', href: '/solutions' },
   { label: 'Company', href: '/company' },
   { label: 'Blog', href: '/blog' },
