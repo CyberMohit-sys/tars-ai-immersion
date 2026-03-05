@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import mohidulImg from '@/assets/team-mohidul.png';
+import farhanImg from '@/assets/team-farhan.png';
 
 const team = [
   {
@@ -7,6 +9,7 @@ const team = [
     description:
       'Mohidul Alom Laskar is the founder of TarsLabs and the creator behind platforms such as Tars AI, TarsVision, and the upcoming Tars AI Studio. His focus is on building scalable artificial intelligence systems that help people create, automate tasks, and develop digital products using AI.',
     initials: 'ML',
+    image: mohidulImg,
   },
   {
     name: 'Farhan Ansari',
@@ -14,6 +17,7 @@ const team = [
     description:
       'Farhan Ansari contributes to product testing, user feedback, and marketing initiatives for TarsLabs. He supports the growth of the Tars AI ecosystem by testing features, exploring user experience, and helping expand community outreach.',
     initials: 'FA',
+    image: farhanImg,
   },
 ];
 
@@ -49,10 +53,13 @@ const Team = () => (
             className="glass-panel gradient-border p-8 group hover:bg-muted/20 transition-all duration-300 hover:shadow-[0_0_40px_hsl(210_100%_56%/0.15)] text-center"
           >
             {/* Avatar */}
-            <div className="w-24 h-24 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center mx-auto mb-6 group-hover:border-primary/60 group-hover:shadow-[0_0_24px_hsl(210_100%_56%/0.25)] transition-all duration-300">
-              <span className="font-display text-2xl font-bold text-primary">
-                {member.initials}
-              </span>
+            <div className="w-24 h-24 rounded-full border-2 border-primary/30 overflow-hidden mx-auto mb-6 group-hover:border-primary/60 group-hover:shadow-[0_0_24px_hsl(210_100%_56%/0.25)] transition-all duration-300">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
             </div>
 
             <h3 className="font-display text-xl font-semibold text-foreground mb-1">
