@@ -24,7 +24,7 @@ function AnimatedCounter({ target, label }: { target: string; label: string }) {
 
   return (
     <div ref={ref} className="text-center">
-      <p className="font-display text-4xl md:text-5xl font-bold text-primary counter-glow">{count}+</p>
+      <p className="font-display text-5xl md:text-6xl font-bold text-primary counter-glow">{count}+</p>
       <p className="text-muted-foreground text-sm mt-2">{label}</p>
     </div>
   );
@@ -70,7 +70,7 @@ export default function Founder() {
             className="w-32 h-32 mx-auto mb-8 rounded-full border-2 border-primary/40 overflow-hidden relative"
             animate={{ y: [0, -6, 0] }}
             transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
-            style={{ boxShadow: '0 0 80px hsl(210 100% 56% / 0.45), 0 0 120px hsl(260 80% 55% / 0.2), inset 0 0 40px hsl(210 100% 56% / 0.15)' }}
+            style={{ boxShadow: '0 0 100px hsl(210 100% 56% / 0.5), 0 0 160px hsl(260 80% 55% / 0.25), inset 0 0 40px hsl(210 100% 56% / 0.15)' }}
           >
             <img src={mohidulImg} alt="Mohidul Alom Laskar" className="w-full h-full object-cover object-top" loading="lazy" />
             {/* Orbiting dot */}
@@ -83,10 +83,10 @@ export default function Founder() {
           </motion.div>
 
           <h3 className="font-display text-2xl font-bold text-foreground mb-1">Mohidul Alom Laskar</h3>
-          <p className="text-primary text-sm font-display tracking-wide mb-1">Founder & AI Architect</p>
+          <p className="text-primary text-sm font-display tracking-wide mb-1">Founder & AI Architect — TARSLabs</p>
           <p className="text-muted-foreground text-xs mb-8 font-display tracking-[0.2em] uppercase">Creator of TARS AI</p>
 
-          <p className="text-primary/70 italic text-sm md:text-base font-display mb-6 tracking-wide">
+          <p className="text-foreground/60 italic text-sm md:text-base font-display mb-6 tracking-wide">
             "The future belongs to autonomous intelligence."
           </p>
 
