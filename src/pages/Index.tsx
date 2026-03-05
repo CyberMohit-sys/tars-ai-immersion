@@ -31,6 +31,7 @@ const Index = () => {
           <TechCards />
           <ProductShowcase />
           <Projects />
+          <Team />
           <Founder />
           <Roadmap />
           <CallToAction />
