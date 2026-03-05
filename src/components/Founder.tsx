@@ -58,8 +58,11 @@ export default function Founder() {
           </h2>
         </motion.div>
 
+        {/* Radial spotlight behind card */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full pointer-events-none" style={{ background: 'radial-gradient(circle, hsl(210 100% 56% / 0.12) 0%, hsl(260 80% 55% / 0.06) 40%, transparent 70%)' }} />
+
         <motion.div
-          className="glass-panel gradient-border p-8 md:p-12 max-w-3xl mx-auto text-center"
+          className="glass-panel gradient-border p-8 md:p-12 max-w-3xl mx-auto text-center relative"
           initial={{ opacity: 0, y: 30, scale: 0.95 }}
           animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -73,13 +76,6 @@ export default function Founder() {
             style={{ boxShadow: '0 0 100px hsl(210 100% 56% / 0.5), 0 0 160px hsl(260 80% 55% / 0.25), inset 0 0 40px hsl(210 100% 56% / 0.15)' }}
           >
             <img src={mohidulImg} alt="Mohidul Alom Laskar" className="w-full h-full object-cover object-top" loading="lazy" />
-            {/* Orbiting dot */}
-            <motion.div
-              className="absolute w-2 h-2 rounded-full bg-accent"
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 6, ease: 'linear' }}
-              style={{ top: '5%', left: '50%', transformOrigin: '0 45px', boxShadow: '0 0 10px hsl(180 100% 50% / 0.6)' }}
-            />
           </motion.div>
 
           <h3 className="font-display text-2xl font-bold text-foreground mb-1">Mohidul Alom Laskar</h3>
