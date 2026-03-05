@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
-
+import mohidulImg from '@/assets/team-mohidul.png';
 const TARS_URL = 'https://tars-ai-blush.vercel.app/';
 
 function AnimatedCounter({ target, label }: { target: string; label: string }) {
