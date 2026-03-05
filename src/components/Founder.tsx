@@ -54,7 +54,7 @@ export default function Founder() {
         >
           <p className="text-primary font-display text-sm tracking-[0.3em] uppercase mb-4">Leadership</p>
           <h2 className="font-display text-4xl md:text-6xl font-bold tracking-tight">
-            Built by <span className="text-gradient">Vision.</span>
+            The Mind Behind <span className="text-gradient">TARSLabs.</span>
           </h2>
         </motion.div>
 
@@ -67,10 +67,10 @@ export default function Founder() {
         >
           {/* Avatar */}
           <motion.div
-            className="w-28 h-28 mx-auto mb-8 rounded-full border-2 border-primary/30 overflow-hidden relative"
+            className="w-32 h-32 mx-auto mb-8 rounded-full border-2 border-primary/40 overflow-hidden relative"
             animate={{ y: [0, -6, 0] }}
             transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
-            style={{ boxShadow: '0 0 50px hsl(210 100% 56% / 0.3), inset 0 0 30px hsl(210 100% 56% / 0.1)' }}
+            style={{ boxShadow: '0 0 80px hsl(210 100% 56% / 0.45), 0 0 120px hsl(260 80% 55% / 0.2), inset 0 0 40px hsl(210 100% 56% / 0.15)' }}
           >
             <img src={mohidulImg} alt="Mohidul Alom Laskar" className="w-full h-full object-cover object-top" loading="lazy" />
             {/* Orbiting dot */}
@@ -86,8 +86,12 @@ export default function Founder() {
           <p className="text-primary text-sm font-display tracking-wide mb-1">Founder & AI Architect</p>
           <p className="text-muted-foreground text-xs mb-8 font-display tracking-[0.2em] uppercase">Creator of TARS AI</p>
 
+          <p className="text-primary/70 italic text-sm md:text-base font-display mb-6 tracking-wide">
+            "The future belongs to autonomous intelligence."
+          </p>
+
           <p className="text-muted-foreground leading-relaxed text-sm md:text-base max-w-xl mx-auto mb-10">
-            Mohidul Alom Laskar is the founder of Tars Labs and the architect behind TARS AI. With a mission to redefine artificial intelligence, he designs and engineers autonomous systems that think, build, and evolve. Every layer of TARS AI — from infrastructure to experience — is developed under his vision.
+            Mohidul Alom Laskar is the founder of TARSLabs and the architect behind TARS AI. His mission is to build autonomous artificial intelligence systems that can think, learn, and evolve. Through TARSLabs, he is developing the foundation for next-generation AI platforms that automate complex tasks and power intelligent digital ecosystems.
           </p>
 
           <div className="flex items-center justify-center gap-4">
