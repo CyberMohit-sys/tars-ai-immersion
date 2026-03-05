@@ -67,12 +67,12 @@ export default function Founder() {
         >
           {/* Avatar */}
           <motion.div
-            className="w-28 h-28 mx-auto mb-8 rounded-full border-2 border-primary/30 bg-muted/50 flex items-center justify-center relative"
+            className="w-28 h-28 mx-auto mb-8 rounded-full border-2 border-primary/30 overflow-hidden relative"
             animate={{ y: [0, -6, 0] }}
             transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
             style={{ boxShadow: '0 0 50px hsl(210 100% 56% / 0.3), inset 0 0 30px hsl(210 100% 56% / 0.1)' }}
           >
-            <span className="font-display text-3xl font-bold text-primary">ML</span>
+            <img src={mohidulImg} alt="Mohidul Alom Laskar" className="w-full h-full object-cover object-top" loading="lazy" />
             {/* Orbiting dot */}
             <motion.div
               className="absolute w-2 h-2 rounded-full bg-accent"
