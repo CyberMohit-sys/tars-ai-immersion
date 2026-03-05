@@ -6,6 +6,7 @@ import TechCards from '../components/TechCards';
 import ProductShowcase from '../components/ProductShowcase';
 import Projects from '../components/Projects';
 import Founder from '../components/Founder';
+import Team from '../components/Team';
 import Roadmap from '../components/Roadmap';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
