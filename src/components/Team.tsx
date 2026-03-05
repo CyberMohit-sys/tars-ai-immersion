@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import mohidulImg from '@/assets/team-mohidul.png';
+import farhanImg from '@/assets/team-farhan.png';
 
 const team = [
   {
@@ -7,6 +9,7 @@ const team = [
     description:
       'Mohidul Alom Laskar is the founder of TarsLabs and the creator behind platforms such as Tars AI, TarsVision, and the upcoming Tars AI Studio. His focus is on building scalable artificial intelligence systems that help people create, automate tasks, and develop digital products using AI.',
     initials: 'ML',
+    image: mohidulImg,
   },
   {
     name: 'Farhan Ansari',
@@ -14,6 +17,7 @@ const team = [
     description:
       'Farhan Ansari contributes to product testing, user feedback, and marketing initiatives for TarsLabs. He supports the growth of the Tars AI ecosystem by testing features, exploring user experience, and helping expand community outreach.',
     initials: 'FA',
+    image: farhanImg,
   },
 ];
 
