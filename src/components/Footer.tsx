@@ -20,6 +20,7 @@ const footerLinks = [
   { label: 'Company', items: [
     { label: 'About', href: '/company' },
     { label: 'Solutions', href: '/solutions' },
+    { label: 'Contact', href: '/contact' },
     { label: 'Security', href: '/security' },
     { label: 'Status', href: '/status' },
   ]},

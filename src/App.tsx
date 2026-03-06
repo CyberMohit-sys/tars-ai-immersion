@@ -20,6 +20,7 @@ import Models from "./pages/Models";
 import Status from "./pages/Status";
 import Security from "./pages/Security";
 import Terms from "./pages/Terms";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,7 @@ const App = () => (
               <Route path="/status" element={<Status />} />
               <Route path="/security" element={<Security />} />
               <Route path="/terms" element={<Terms />} />
+              <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
