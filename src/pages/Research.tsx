@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FileText, BarChart3, Cpu, Shield, PenTool } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const items = [
   { icon: FileText, title: 'Research Papers', desc: 'Published work on autonomous reasoning, multi-agent coordination, and neural architecture innovations.', tag: 'Papers' },
@@ -12,7 +14,8 @@ const items = [
 
 export default function Research() {
   return (
-    <div className="min-h-screen bg-background">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen bg-background">
+      <Navbar />
       <div className="border-b border-border/20 pt-24 pb-16 px-6">
         <div className="max-w-5xl mx-auto">
           <Link to="/" className="text-muted-foreground hover:text-foreground text-sm font-display mb-6 inline-block">← Back to Home</Link>
@@ -53,6 +56,7 @@ export default function Research() {
           );
         })}
       </div>
-    </div>
+      <Footer />
+    </motion.div>
   );
 }

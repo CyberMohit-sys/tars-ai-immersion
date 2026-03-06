@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const tiers = [
   { name: 'Free', price: '$0', period: '/month', desc: 'For exploration and prototyping', features: ['1,000 API calls/month', 'TARS Code access', 'Community support', 'Basic rate limits'], cta: 'Get Started', highlighted: false },
@@ -10,7 +12,8 @@ const tiers = [
 
 export default function Pricing() {
   return (
-    <div className="min-h-screen bg-background">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen bg-background">
+      <Navbar />
       <div className="border-b border-border/20 pt-24 pb-16 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <Link to="/" className="text-muted-foreground hover:text-foreground text-sm font-display mb-6 inline-block">← Back to Home</Link>
@@ -53,6 +56,7 @@ export default function Pricing() {
           </motion.div>
         ))}
       </div>
-    </div>
+      <Footer />
+    </motion.div>
   );
 }

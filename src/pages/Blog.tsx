@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const posts = [
   { category: 'Product Launch', title: 'Introducing TARS Vision — Visual Intelligence Engine', desc: 'Transform ideas into high-fidelity AI-generated visuals through advanced multimodal reasoning.', date: 'Mar 2026' },
@@ -12,7 +14,8 @@ const posts = [
 
 export default function Blog() {
   return (
-    <div className="min-h-screen bg-background">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen bg-background">
+      <Navbar />
       <div className="border-b border-border/20 pt-24 pb-16 px-6">
         <div className="max-w-5xl mx-auto">
           <Link to="/" className="text-muted-foreground hover:text-foreground text-sm font-display mb-6 inline-block">← Back to Home</Link>
@@ -46,6 +49,7 @@ export default function Blog() {
           </motion.article>
         ))}
       </div>
-    </div>
+      <Footer />
+    </motion.div>
   );
 }

@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Book, Key, Code2, Eye, Zap, AlertTriangle, Terminal, Rocket, ChevronRight } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const sections = [
   { icon: Rocket, title: 'Getting Started', desc: 'Quick start guide to integrate TARS AI into your applications in minutes.' },
@@ -16,8 +18,8 @@ const sections = [
 
 export default function Docs() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen bg-background">
+      <Navbar />
       <div className="border-b border-border/20 pt-24 pb-16 px-6">
         <div className="max-w-5xl mx-auto">
           <Link to="/" className="text-muted-foreground hover:text-foreground text-sm font-display mb-6 inline-block">← Back to Home</Link>
@@ -33,7 +35,6 @@ export default function Docs() {
         </div>
       </div>
 
-      {/* Grid */}
       <div className="max-w-5xl mx-auto px-6 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {sections.map((s, i) => {
@@ -63,7 +64,6 @@ export default function Docs() {
           })}
         </div>
 
-        {/* Code example */}
         <motion.div
           className="mt-16 glass-panel gradient-border p-8"
           initial={{ opacity: 0, y: 20 }}
@@ -99,6 +99,7 @@ export default function Docs() {
           </div>
         </motion.div>
       </div>
-    </div>
+      <Footer />
+    </motion.div>
   );
 }
