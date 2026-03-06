@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Code2, Building2, Palette, Rocket } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const segments = [
   { icon: Code2, title: 'For Developers', desc: 'Powerful APIs, SDKs, and tools to integrate autonomous AI into your applications. Build faster with TARS Code and deploy intelligent agents.', features: ['REST & WebSocket APIs', 'Python / JS / Go SDKs', 'Streaming responses', 'Model fine-tuning'] },
@@ -11,7 +13,8 @@ const segments = [
 
 export default function Solutions() {
   return (
-    <div className="min-h-screen bg-background">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen bg-background">
+      <Navbar />
       <div className="border-b border-border/20 pt-24 pb-16 px-6">
         <div className="max-w-5xl mx-auto">
           <Link to="/" className="text-muted-foreground hover:text-foreground text-sm font-display mb-6 inline-block">← Back to Home</Link>
@@ -55,6 +58,7 @@ export default function Solutions() {
           );
         })}
       </div>
-    </div>
+      <Footer />
+    </motion.div>
   );
 }
