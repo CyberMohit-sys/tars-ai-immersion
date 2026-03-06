@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import mohidulImg from '@/assets/team-mohidul.png';
 import farhanImg from '@/assets/team-farhan.png';
+import alishaImg from '@/assets/team-alisha.png';
 
 const team = [
   {
@@ -18,6 +19,14 @@ const team = [
       'Farhan Ansari contributes to product testing, user feedback, and marketing initiatives for TarsLabs. He supports the growth of the Tars AI ecosystem by testing features, exploring user experience, and helping expand community outreach.',
     initials: 'FA',
     image: farhanImg,
+  },
+  {
+    name: 'Alisha Munda',
+    role: 'Content Creator — TarsLabs',
+    description:
+      'Alisha Munda is a Content Creator at TarsLabs. She works on creating engaging digital content, social media posts, and creative storytelling that helps communicate the vision and updates of TarsLabs. Her work supports the growth of the TarsLabs community and helps present products like Tars AI and TarsVision to a wider audience.',
+    initials: 'AM',
+    image: alishaImg,
   },
 ];
 
@@ -42,7 +51,7 @@ const Team = () => (
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {team.map((member, i) => (
           <motion.div
             key={member.name}
