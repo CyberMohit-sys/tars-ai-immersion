@@ -38,7 +38,6 @@ const team = [
     initials: 'AL',
     image: amanulImg,
   },
-  },
   {
     name: 'Rejwan Hussain',
     role: 'Content Creator & Editor — TarsLabs',
