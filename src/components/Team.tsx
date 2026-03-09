@@ -22,7 +22,7 @@ const team = [
   },
   {
     name: 'Alisha Munda',
-    role: 'Content Creator — TarsLabs',
+    role: 'Content Creator & Business Strategist — TarsLabs',
     description:
       'Alisha Munda is a Content Creator at TarsLabs. She works on creating engaging digital content, social media posts, and creative storytelling that helps communicate the vision and updates of TarsLabs. Her work supports the growth of the TarsLabs community and helps present products like Tars AI and TarsVision to a wider audience.',
     initials: 'AM',
