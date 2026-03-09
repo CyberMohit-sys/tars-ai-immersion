@@ -38,6 +38,15 @@ const team = [
     initials: 'AL',
     image: amanulImg,
   },
+  },
+  {
+    name: 'Rejwan Hussain',
+    role: 'Content Creator & Editor — TarsLabs',
+    description:
+      'Rejwan Hussain is a Content Creator and Editor at TarsLabs. He produces and edits high-quality video and multimedia content that showcases TarsLabs products and vision, helping bring the story of Tars AI and TarsVision to life for a growing audience.',
+    initials: 'RH',
+    image: rejwanImg,
+  },
 ];
 
 const Team = () => (
