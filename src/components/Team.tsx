@@ -14,7 +14,7 @@ const team = [
   },
   {
     name: 'Farhan Ansari',
-    role: 'Product & Marketing Associate — TarsLabs',
+    role: 'Co-Founder (Product & Marketing) — TarsLabs',
     description:
       'Farhan Ansari contributes to product testing, user feedback, and marketing initiatives for TarsLabs. He supports the growth of the Tars AI ecosystem by testing features, exploring user experience, and helping expand community outreach.',
     initials: 'FA',
