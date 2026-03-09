@@ -3,6 +3,7 @@ import mohidulImg from '@/assets/team-mohidul.png';
 import farhanImg from '@/assets/team-farhan.png';
 import alishaImg from '@/assets/team-alisha.png';
 import amanulImg from '@/assets/team-amanul.png';
+import rejwanImg from '@/assets/team-rejwan.png';
 
 const team = [
   {
@@ -36,6 +37,14 @@ const team = [
       'Amanul Laskar is an Editor at TarsLabs. He is responsible for reviewing, refining, and polishing content across all TarsLabs platforms, ensuring clarity, consistency, and quality in every piece of communication that reaches the audience.',
     initials: 'AL',
     image: amanulImg,
+  },
+  {
+    name: 'Rejwan Hussain',
+    role: 'Content Creator & Editor — TarsLabs',
+    description:
+      'Rejwan Hussain is a Content Creator and Editor at TarsLabs. He produces and edits high-quality video and multimedia content that showcases TarsLabs products and vision, helping bring the story of Tars AI and TarsVision to life for a growing audience.',
+    initials: 'RH',
+    image: rejwanImg,
   },
 ];
 
