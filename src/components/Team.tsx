@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import mohidulImg from '@/assets/team-mohidul.png';
 import farhanImg from '@/assets/team-farhan.png';
 import alishaImg from '@/assets/team-alisha.png';
+import amanulImg from '@/assets/team-amanul.png';
 
 const team = [
   {
@@ -27,6 +28,14 @@ const team = [
       'Alisha Munda is a Content Creator at TarsLabs. She works on creating engaging digital content, social media posts, and creative storytelling that helps communicate the vision and updates of TarsLabs. Her work supports the growth of the TarsLabs community and helps present products like Tars AI and TarsVision to a wider audience.',
     initials: 'AM',
     image: alishaImg,
+  },
+  {
+    name: 'Amanul Laskar',
+    role: 'Editor — TarsLabs',
+    description:
+      'Amanul Laskar is an Editor at TarsLabs. He is responsible for reviewing, refining, and polishing content across all TarsLabs platforms, ensuring clarity, consistency, and quality in every piece of communication that reaches the audience.',
+    initials: 'AL',
+    image: amanulImg,
   },
 ];
 
