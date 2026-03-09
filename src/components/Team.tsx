@@ -3,6 +3,7 @@ import mohidulImg from '@/assets/team-mohidul.png';
 import farhanImg from '@/assets/team-farhan.png';
 import alishaImg from '@/assets/team-alisha.png';
 import amanulImg from '@/assets/team-amanul.png';
+import rejwanImg from '@/assets/team-rejwan.png';
 
 const team = [
   {
