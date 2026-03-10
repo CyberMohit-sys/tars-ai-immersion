@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Suspense, lazy } from 'react';
+import { ArrowRight } from 'lucide-react';
 import heroBg from '@/assets/hero-bg.jpg';
 
 const TARS_URL = 'https://tars-ai-blush.vercel.app/';
@@ -76,7 +77,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          Engineering the next evolution of artificial intelligence.
+          Engineering the next evolution of artificial intelligence — systems that think, reason, and build autonomously.
         </motion.p>
 
         <motion.div
@@ -85,8 +86,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.7 }}
         >
-          <a href={TARS_URL} target="_blank" rel="noopener noreferrer" className="btn-glow text-primary-foreground">
+          <a href={TARS_URL} target="_blank" rel="noopener noreferrer" className="btn-glow text-primary-foreground inline-flex items-center gap-2 group">
             Launch TARS AI
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
           <button onClick={() => scrollTo('#technology')} className="btn-outline-glow">
             Explore Technology

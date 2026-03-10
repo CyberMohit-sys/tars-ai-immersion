@@ -8,42 +8,33 @@ import rejwanImg from '@/assets/team-rejwan.png';
 const team = [
   {
     name: 'Mohidul Alom Laskar',
-    role: 'Founder & CEO — TarsLabs',
-    description:
-      'Mohidul Alom Laskar is the founder of TarsLabs and the creator behind platforms such as Tars AI, TarsVision, and the upcoming Tars AI Studio. His focus is on building scalable artificial intelligence systems that help people create, automate tasks, and develop digital products using AI.',
-    initials: 'ML',
+    role: 'Founder & CEO',
+    description: 'Founder of TarsLabs and creator of Tars AI, TarsVision, and Tars AI Studio. Building scalable AI systems for the autonomous future.',
     image: mohidulImg,
+    highlight: true,
   },
   {
     name: 'Farhan Ansari',
-    role: 'Co-Founder (Product & Marketing) — TarsLabs',
-    description:
-      'Farhan Ansari contributes to product testing, user feedback, and marketing initiatives for TarsLabs. He supports the growth of the Tars AI ecosystem by testing features, exploring user experience, and helping expand community outreach.',
-    initials: 'FA',
+    role: 'Co-Founder · Product & Marketing',
+    description: 'Drives product testing, user feedback, and marketing initiatives. Supports Tars AI ecosystem growth and community outreach.',
     image: farhanImg,
   },
   {
     name: 'Alisha Munda',
-    role: 'Content Creator & Business Strategist — TarsLabs',
-    description:
-      'Alisha Munda is a Content Creator at TarsLabs. She works on creating engaging digital content, social media posts, and creative storytelling that helps communicate the vision and updates of TarsLabs. Her work supports the growth of the TarsLabs community and helps present products like Tars AI and TarsVision to a wider audience.',
-    initials: 'AM',
+    role: 'Content Creator & Strategist',
+    description: 'Creates engaging digital content and social media storytelling that communicates TarsLabs vision to a wider audience.',
     image: alishaImg,
   },
   {
     name: 'Amanul Laskar',
-    role: 'Editor — TarsLabs',
-    description:
-      'Amanul Laskar is an Editor at TarsLabs. He is responsible for reviewing, refining, and polishing content across all TarsLabs platforms, ensuring clarity, consistency, and quality in every piece of communication that reaches the audience.',
-    initials: 'AL',
+    role: 'Editor',
+    description: 'Reviews, refines, and polishes content across all TarsLabs platforms, ensuring clarity and quality in every communication.',
     image: amanulImg,
   },
   {
     name: 'Rejwan Hussain',
-    role: 'Content Creator & Editor — TarsLabs',
-    description:
-      'Rejwan Hussain is a Content Creator and Editor at TarsLabs. He produces and edits high-quality video and multimedia content that showcases TarsLabs products and vision, helping bring the story of Tars AI and TarsVision to life for a growing audience.',
-    initials: 'RH',
+    role: 'Content Creator & Editor',
+    description: 'Produces and edits high-quality video and multimedia content that showcases TarsLabs products and brings the vision to life.',
     image: rejwanImg,
   },
 ];
@@ -69,40 +60,63 @@ const Team = () => (
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-        {team.map((member, i) => (
-          <motion.div
-            key={member.name}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.5, delay: i * 0.15 }}
-            className="glass-panel gradient-border p-8 group hover:bg-muted/20 transition-all duration-300 hover:shadow-[0_0_40px_hsl(210_100%_56%/0.15)] text-center"
-          >
-            {/* Avatar */}
-            <div className="w-24 h-24 rounded-full border-2 border-primary/30 overflow-hidden mx-auto mb-6 group-hover:border-primary/60 group-hover:shadow-[0_0_24px_hsl(210_100%_56%/0.25)] transition-all duration-300">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-full h-full object-cover object-top"
-                loading="lazy"
-              />
-            </div>
+      {/* Top row: 3 cards centered */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-6">
+        {team.slice(0, 3).map((member, i) => (
+          <TeamCard key={member.name} member={member} index={i} />
+        ))}
+      </div>
 
-            <h3 className="font-display text-xl font-semibold text-foreground mb-1">
-              {member.name}
-            </h3>
-            <p className="text-primary text-sm font-display tracking-wide mb-4">
-              {member.role}
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              {member.description}
-            </p>
-          </motion.div>
+      {/* Bottom row: 2 cards centered */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        {team.slice(3).map((member, i) => (
+          <TeamCard key={member.name} member={member} index={i + 3} />
         ))}
       </div>
     </div>
   </section>
 );
+
+function TeamCard({ member, index }: { member: typeof team[0]; index: number }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className={`glass-panel gradient-border p-8 group hover:bg-muted/20 transition-all duration-300 hover:shadow-[0_0_40px_hsl(210_100%_56%/0.15)] text-center ${member.highlight ? 'ring-1 ring-primary/20' : ''}`}
+    >
+      {/* Avatar */}
+      <div className={`w-24 h-24 rounded-full border-2 overflow-hidden mx-auto mb-6 transition-all duration-300 ${
+        member.highlight
+          ? 'border-primary/50 shadow-[0_0_30px_hsl(210_100%_56%/0.25)] group-hover:shadow-[0_0_40px_hsl(210_100%_56%/0.35)]'
+          : 'border-primary/30 group-hover:border-primary/60 group-hover:shadow-[0_0_24px_hsl(210_100%_56%/0.25)]'
+      }`}>
+        <img
+          src={member.image}
+          alt={member.name}
+          className="w-full h-full object-cover object-top"
+          loading="lazy"
+        />
+      </div>
+
+      {member.highlight && (
+        <span className="inline-block text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 font-display tracking-wider uppercase mb-3">
+          Founder
+        </span>
+      )}
+
+      <h3 className="font-display text-xl font-semibold text-foreground mb-1">
+        {member.name}
+      </h3>
+      <p className="text-primary text-sm font-display tracking-wide mb-4">
+        {member.role}
+      </p>
+      <p className="text-muted-foreground text-sm leading-relaxed">
+        {member.description}
+      </p>
+    </motion.div>
+  );
+}
 
 export default Team;
