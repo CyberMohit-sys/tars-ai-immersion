@@ -34,7 +34,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="font-display text-lg font-bold tracking-wider text-foreground">
-              TARS<span className="text-primary">LABS</span>
+              TARS<span className="text-primary">LABS</span> <span className="text-xs text-muted-foreground font-normal tracking-normal">Innovation</span>
             </Link>
             <p className="text-xs text-muted-foreground mt-3 leading-relaxed">Engineering the next evolution of artificial intelligence.</p>
             <div className="flex gap-3 mt-4">
