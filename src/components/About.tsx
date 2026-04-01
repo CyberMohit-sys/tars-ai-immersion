@@ -16,7 +16,7 @@ export default function About() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-primary font-display text-sm tracking-[0.3em] uppercase mb-4">About Tars Labs</p>
+          <p className="text-primary font-display text-sm tracking-[0.3em] uppercase mb-4">About TarsLabs Innovation</p>
           <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.1] tracking-tight">
             Built for the<br />
             <span className="text-gradient">Autonomous Future.</span>
@@ -31,7 +31,7 @@ export default function About() {
         >
           <div className="glass-panel gradient-border p-8">
             <p className="text-foreground/80 text-lg leading-relaxed">
-              Tars Labs is an independent AI research and product company focused on building autonomous intelligence systems that think, build, and execute.
+              Tars Labs Innovation is an independent AI research and product company focused on building autonomous intelligence systems that think, build, and execute.
             </p>
           </div>
           <div className="glass-panel gradient-border p-8">

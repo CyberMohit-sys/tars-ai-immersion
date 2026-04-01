@@ -19,6 +19,10 @@ const footerLinks = [
   ]},
   { label: 'Company', items: [
     { label: 'About', href: '/company' },
+    { label: 'Careers', href: '/careers' },
+    { label: 'Partners', href: '/partners' },
+    { label: 'Case Studies', href: '/case-studies' },
+    { label: 'Changelog', href: '/changelog' },
     { label: 'Solutions', href: '/solutions' },
     { label: 'Contact', href: '/contact' },
     { label: 'Security', href: '/security' },
@@ -34,7 +38,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="font-display text-lg font-bold tracking-wider text-foreground">
-              TARS<span className="text-primary">LABS</span>
+              TARS<span className="text-primary">LABS</span> <span className="text-xs text-muted-foreground font-normal tracking-normal">Innovation</span>
             </Link>
             <p className="text-xs text-muted-foreground mt-3 leading-relaxed">Engineering the next evolution of artificial intelligence.</p>
             <div className="flex gap-3 mt-4">
@@ -68,7 +72,7 @@ export default function Footer() {
 
         <div className="border-t border-border/20 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            © 2026 TarsLabs. Founded by Mohidul Alom Laskar.
+            © 2026 TarsLabs Innovation. Founded by Mohidul Alom Laskar.
           </p>
           <div className="flex gap-4 text-xs text-muted-foreground">
             <Link to="/terms" className="hover:text-primary transition-colors">Privacy</Link>

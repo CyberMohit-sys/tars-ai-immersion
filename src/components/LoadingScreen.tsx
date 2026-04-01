@@ -57,6 +57,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
               <h1 className="font-display text-2xl font-bold tracking-[0.4em] text-foreground">
                 TARS<span className="text-primary">LABS</span>
               </h1>
+              <p className="text-xs text-muted-foreground font-display tracking-widest mt-1">INNOVATION</p>
             </motion.div>
 
             {/* Loading bar */}

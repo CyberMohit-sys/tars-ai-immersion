@@ -21,6 +21,10 @@ import Status from "./pages/Status";
 import Security from "./pages/Security";
 import Terms from "./pages/Terms";
 import Contact from "./pages/Contact";
+import Careers from "./pages/Careers";
+import CaseStudies from "./pages/CaseStudies";
+import Partners from "./pages/Partners";
+import Changelog from "./pages/Changelog";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +52,10 @@ const App = () => (
               <Route path="/security" element={<Security />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/changelog" element={<Changelog />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>

@@ -131,7 +131,7 @@ const Team = () => (
           Meet the <span className="text-gradient">Team</span>
         </h2>
         <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-          The minds behind TarsLabs — building the future of autonomous intelligence.
+          The minds behind TarsLabs Innovation — building the future of autonomous intelligence.
         </p>
       </motion.div>
 

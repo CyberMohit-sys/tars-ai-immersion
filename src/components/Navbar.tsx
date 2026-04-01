@@ -105,7 +105,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
           <Link to="/" className="font-display text-lg font-bold tracking-wider text-foreground">
-            TARS<span className="text-primary">LABS</span>
+            TARS<span className="text-primary">LABS</span> <span className="text-xs text-muted-foreground font-normal tracking-normal">Innovation</span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-6">
@@ -162,7 +162,7 @@ export default function Navbar() {
             >
               <div className="flex justify-between items-center mb-10">
                 <span className="font-display text-lg font-bold tracking-wider text-foreground">
-                  TARS<span className="text-primary">LABS</span>
+                  TARS<span className="text-primary">LABS</span> <span className="text-xs text-muted-foreground font-normal tracking-normal">Innovation</span>
                 </span>
                 <button onClick={() => setMobileOpen(false)} className="text-muted-foreground hover:text-foreground">
                   <X className="w-5 h-5" />
