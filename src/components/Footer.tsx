@@ -19,6 +19,10 @@ const footerLinks = [
   ]},
   { label: 'Company', items: [
     { label: 'About', href: '/company' },
+    { label: 'Careers', href: '/careers' },
+    { label: 'Partners', href: '/partners' },
+    { label: 'Case Studies', href: '/case-studies' },
+    { label: 'Changelog', href: '/changelog' },
     { label: 'Solutions', href: '/solutions' },
     { label: 'Contact', href: '/contact' },
     { label: 'Security', href: '/security' },
