@@ -16,7 +16,7 @@ export default function About() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-primary font-display text-sm tracking-[0.3em] uppercase mb-4">About Tars Labs</p>
+          <p className="text-primary font-display text-sm tracking-[0.3em] uppercase mb-4">About TarsLabs Innovation</p>
           <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.1] tracking-tight">
             Built for the<br />
             <span className="text-gradient">Autonomous Future.</span>
