@@ -31,7 +31,7 @@ export default function About() {
         >
           <div className="glass-panel gradient-border p-8">
             <p className="text-foreground/80 text-lg leading-relaxed">
-              Tars Labs is an independent AI research and product company focused on building autonomous intelligence systems that think, build, and execute.
+              Tars Labs Innovation is an independent AI research and product company focused on building autonomous intelligence systems that think, build, and execute.
             </p>
           </div>
           <div className="glass-panel gradient-border p-8">
