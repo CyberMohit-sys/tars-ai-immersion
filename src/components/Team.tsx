@@ -74,6 +74,7 @@ const team: TeamMember[] = [
     description:
       'Mahmadul Hussain manages collaborations and partnerships at TarsLabs, building strategic relationships that expand the reach and impact of TarsLabs products and services.',
     initials: 'MH',
+    image: mahmadulImg,
   },
   {
     name: 'Maksud Laskar',
