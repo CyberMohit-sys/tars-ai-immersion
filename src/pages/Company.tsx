@@ -17,11 +17,11 @@ const contactSchema = z.object({
 type ContactForm = z.infer<typeof contactSchema>;
 
 const sections = [
-  { icon: Target, title: 'About TarsLabs', desc: 'An independent AI research company building autonomous intelligence systems that think, create, and execute.' },
+  { icon: Target, title: 'About TarsLabs Innovation', desc: 'An independent AI research company building autonomous intelligence systems that think, create, and execute.' },
   { icon: Target, title: 'Mission', desc: 'To transform artificial intelligence from reactive tools into proactive autonomous systems capable of independent creation and execution.' },
   { icon: Users, title: 'Careers', desc: 'We\'re building the future of AI. Join our team of researchers, engineers, and visionaries shaping autonomous intelligence.' },
-  { icon: Newspaper, title: 'Press', desc: 'Media resources, press releases, and official communications from TarsLabs.' },
-  { icon: Package, title: 'Brand Kit', desc: 'Official logos, brand guidelines, and media assets for TarsLabs and TARS AI.' },
+  { icon: Newspaper, title: 'Press', desc: 'Media resources, press releases, and official communications from TarsLabs Innovation.' },
+  { icon: Package, title: 'Brand Kit', desc: 'Official logos, brand guidelines, and media assets for TarsLabs Innovation and TARS AI.' },
 ];
 
 export default function Company() {
