@@ -162,7 +162,7 @@ export default function Navbar() {
             >
               <div className="flex justify-between items-center mb-10">
                 <span className="font-display text-lg font-bold tracking-wider text-foreground">
-                  TARS<span className="text-primary">LABS</span>
+                  TARS<span className="text-primary">LABS</span> <span className="text-xs text-muted-foreground font-normal tracking-normal">Innovation</span>
                 </span>
                 <button onClick={() => setMobileOpen(false)} className="text-muted-foreground hover:text-foreground">
                   <X className="w-5 h-5" />

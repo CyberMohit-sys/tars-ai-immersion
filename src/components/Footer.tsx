@@ -72,7 +72,7 @@ export default function Footer() {
 
         <div className="border-t border-border/20 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            © 2026 TarsLabs. Founded by Mohidul Alom Laskar.
+            © 2026 TarsLabs Innovation. Founded by Mohidul Alom Laskar.
           </p>
           <div className="flex gap-4 text-xs text-muted-foreground">
             <Link to="/terms" className="hover:text-primary transition-colors">Privacy</Link>
