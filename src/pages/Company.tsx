@@ -65,7 +65,7 @@ export default function Company() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <p className="text-primary font-display text-sm tracking-[0.3em] uppercase mb-3">Company</p>
             <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight">
-              About <span className="text-gradient">TarsLabs</span>
+              About <span className="text-gradient">TarsLabs Innovation</span>
             </h1>
             <p className="text-muted-foreground text-lg mt-4 max-w-2xl">
               Engineering the next evolution of artificial intelligence.
