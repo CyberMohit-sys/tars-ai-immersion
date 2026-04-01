@@ -110,6 +110,7 @@ const team: TeamMember[] = [
     description:
       'Firdous Begum is a Product Tester at TarsLabs, evaluating new features and products to identify issues and provide feedback that helps improve the overall quality of TarsLabs offerings.',
     initials: 'FB',
+    image: firdousImg,
   },
 ];
 
