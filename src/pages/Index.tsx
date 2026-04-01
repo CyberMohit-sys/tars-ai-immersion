@@ -5,14 +5,18 @@ import About from '../components/About';
 import TechCards from '../components/TechCards';
 import ProductShowcase from '../components/ProductShowcase';
 import Projects from '../components/Projects';
+import Testimonials from '../components/Testimonials';
 import Founder from '../components/Founder';
 import Team from '../components/Team';
+import FAQ from '../components/FAQ';
+import Newsletter from '../components/Newsletter';
 import Roadmap from '../components/Roadmap';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
 import LoadingScreen from '../components/LoadingScreen';
 import GlowCursor from '../components/GlowCursor';
 import ParticleNetwork from '../components/ParticleNetwork';
+import LiveChat from '../components/LiveChat';
 
 const Index = () => {
   const [loaded, setLoaded] = useState(false);
@@ -31,11 +35,15 @@ const Index = () => {
           <TechCards />
           <ProductShowcase />
           <Projects />
+          <Testimonials />
           <Team />
           <Founder />
+          <FAQ />
+          <Newsletter />
           <Roadmap />
           <CallToAction />
           <Footer />
+          <LiveChat />
         </>
       )}
     </div>
