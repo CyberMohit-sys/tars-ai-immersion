@@ -3,6 +3,8 @@ import mohidulImg from '@/assets/team-mohidul.png';
 import farhanImg from '@/assets/team-farhan.png';
 import amanulImg from '@/assets/team-amanul.png';
 import rejwanImg from '@/assets/team-rejwan.png';
+import firdousImg from '@/assets/team-firdous.jpg';
+import mahmadulImg from '@/assets/team-mahmadul.png';
 
 interface TeamMember {
   name: string;
@@ -72,6 +74,7 @@ const team: TeamMember[] = [
     description:
       'Mahmadul Hussain manages collaborations and partnerships at TarsLabs, building strategic relationships that expand the reach and impact of TarsLabs products and services.',
     initials: 'MH',
+    image: mahmadulImg,
   },
   {
     name: 'Maksud Laskar',
@@ -107,6 +110,7 @@ const team: TeamMember[] = [
     description:
       'Firdous Begum is a Product Tester at TarsLabs, evaluating new features and products to identify issues and provide feedback that helps improve the overall quality of TarsLabs offerings.',
     initials: 'FB',
+    image: firdousImg,
   },
 ];
 
