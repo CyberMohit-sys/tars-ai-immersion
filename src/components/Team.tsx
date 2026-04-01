@@ -3,6 +3,8 @@ import mohidulImg from '@/assets/team-mohidul.png';
 import farhanImg from '@/assets/team-farhan.png';
 import amanulImg from '@/assets/team-amanul.png';
 import rejwanImg from '@/assets/team-rejwan.png';
+import firdousImg from '@/assets/team-firdous.jpg';
+import mahmadulImg from '@/assets/team-mahmadul.png';
 
 interface TeamMember {
   name: string;
