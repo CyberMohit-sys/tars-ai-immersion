@@ -27,6 +27,7 @@ const navItems = [
       { label: 'Documentation', href: '/docs' },
       { label: 'API Playground', href: '/playground' },
       { label: 'Open Source', href: '/open-source' },
+      { label: 'Community', href: '/community' },
       { label: 'Changelog', href: '/changelog' },
     ],
   },
