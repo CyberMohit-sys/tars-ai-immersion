@@ -31,6 +31,8 @@ import OpenSource from "./pages/OpenSource";
 import Events from "./pages/Events";
 import Press from "./pages/Press";
 import Sustainability from "./pages/Sustainability";
+import Investors from "./pages/Investors";
+import Community from "./pages/Community";
 
 const queryClient = new QueryClient();
 
@@ -68,6 +70,8 @@ const App = () => (
               <Route path="/events" element={<Events />} />
               <Route path="/press" element={<Press />} />
               <Route path="/sustainability" element={<Sustainability />} />
+              <Route path="/investors" element={<Investors />} />
+              <Route path="/community" element={<Community />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
