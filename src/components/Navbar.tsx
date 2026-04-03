@@ -39,6 +39,7 @@ const navItems = [
       { label: 'Careers', href: '/careers' },
       { label: 'Case Studies', href: '/case-studies' },
       { label: 'Partners', href: '/partners' },
+      { label: 'Investors', href: '/investors' },
       { label: 'Events', href: '/events' },
       { label: 'Press', href: '/press' },
       { label: 'Trust & Safety', href: '/trust-safety' },
