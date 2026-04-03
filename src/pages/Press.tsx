@@ -85,6 +85,20 @@ export default function Press() {
         </div>
       </div>
 
+      {/* Cross-links */}
+      <div className="py-16 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-display text-2xl font-bold text-foreground mb-4">Learn More About TarsLabs</h2>
+          <div className="flex flex-wrap justify-center gap-4 mt-6">
+            <Link to="/company" className="btn-outline-glow px-6 py-2.5 font-display inline-flex items-center gap-2"><ArrowUpRight className="w-4 h-4" /> About Us</Link>
+            <Link to="/investors" className="btn-outline-glow px-6 py-2.5 font-display inline-flex items-center gap-2"><ArrowUpRight className="w-4 h-4" /> Investors</Link>
+            <Link to="/case-studies" className="btn-outline-glow px-6 py-2.5 font-display inline-flex items-center gap-2"><ArrowUpRight className="w-4 h-4" /> Case Studies</Link>
+            <Link to="/events" className="btn-outline-glow px-6 py-2.5 font-display inline-flex items-center gap-2"><ArrowUpRight className="w-4 h-4" /> Events</Link>
+            <Link to="/careers" className="btn-outline-glow px-6 py-2.5 font-display inline-flex items-center gap-2"><ArrowUpRight className="w-4 h-4" /> Careers</Link>
+          </div>
+        </div>
+      </div>
+
       <Footer />
     </motion.div>
   );
