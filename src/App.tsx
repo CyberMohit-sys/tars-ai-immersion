@@ -31,6 +31,8 @@ import OpenSource from "./pages/OpenSource";
 import Events from "./pages/Events";
 import Press from "./pages/Press";
 import Sustainability from "./pages/Sustainability";
+import Investors from "./pages/Investors";
+import Community from "./pages/Community";
 
 const queryClient = new QueryClient();
 
