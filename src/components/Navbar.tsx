@@ -17,6 +17,7 @@ const navItems = [
       { label: 'Lifecare AI', href: 'https://lifecareai-health-guardian.vercel.app/', external: true },
       { label: 'Models', href: '/models' },
       { label: 'Pricing', href: '/pricing' },
+      { label: 'Enterprise', href: '/enterprise' },
     ],
   },
   { label: 'Research', href: '/research' },
@@ -25,10 +26,24 @@ const navItems = [
     children: [
       { label: 'Documentation', href: '/docs' },
       { label: 'API Playground', href: '/playground' },
+      { label: 'Open Source', href: '/open-source' },
+      { label: 'Changelog', href: '/changelog' },
     ],
   },
   { label: 'Solutions', href: '/solutions' },
-  { label: 'Company', href: '/company' },
+  {
+    label: 'Company',
+    children: [
+      { label: 'About', href: '/company' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Case Studies', href: '/case-studies' },
+      { label: 'Partners', href: '/partners' },
+      { label: 'Events', href: '/events' },
+      { label: 'Press', href: '/press' },
+      { label: 'Trust & Safety', href: '/trust-safety' },
+      { label: 'Sustainability', href: '/sustainability' },
+    ],
+  },
   { label: 'Blog', href: '/blog' },
 ];
 
