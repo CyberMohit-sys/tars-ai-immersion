@@ -130,7 +130,7 @@ export default function Community() {
                   className="glass-panel p-5 hover:bg-muted/20 transition-all group cursor-pointer flex items-start gap-4">
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
-                      {t.hot && <span className="text-[10px] px-2 py-0.5 rounded-full bg-red-500/20 text-red-400 border border-red-500/20 font-display">HOT</span>}
+                      {t.hot && <span className="text-[10px] px-2 py-0.5 rounded-full bg-destructive/20 text-destructive border border-destructive/20 font-display">HOT</span>}
                       <span className="text-[10px] text-primary font-display tracking-wide">{t.category}</span>
                     </div>
                     <h3 className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors truncate">{t.title}</h3>
