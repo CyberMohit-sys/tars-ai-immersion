@@ -25,6 +25,12 @@ import Careers from "./pages/Careers";
 import CaseStudies from "./pages/CaseStudies";
 import Partners from "./pages/Partners";
 import Changelog from "./pages/Changelog";
+import Enterprise from "./pages/Enterprise";
+import TrustSafety from "./pages/TrustSafety";
+import OpenSource from "./pages/OpenSource";
+import Events from "./pages/Events";
+import Press from "./pages/Press";
+import Sustainability from "./pages/Sustainability";
 
 const queryClient = new QueryClient();
 
