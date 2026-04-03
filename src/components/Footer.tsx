@@ -43,7 +43,7 @@ export default function Footer() {
   return (
     <footer className="px-6 md:px-12 lg:px-24 py-16 border-t border-border/20">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div>
             <Link to="/" className="font-display text-lg font-bold tracking-wider text-foreground">
