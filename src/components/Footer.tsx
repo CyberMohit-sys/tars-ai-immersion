@@ -10,11 +10,14 @@ const footerLinks = [
     { label: 'Lifecare AI', href: 'https://lifecareai-health-guardian.vercel.app/', external: true },
     { label: 'Models', href: '/models' },
     { label: 'Pricing', href: '/pricing' },
+    { label: 'Enterprise', href: '/enterprise' },
   ]},
   { label: 'Developers', items: [
     { label: 'Documentation', href: '/docs' },
     { label: 'API Playground', href: '/playground' },
+    { label: 'Open Source', href: '/open-source' },
     { label: 'Research', href: '/research' },
+    { label: 'Changelog', href: '/changelog' },
     { label: 'Blog', href: '/blog' },
   ]},
   { label: 'Company', items: [
@@ -22,10 +25,16 @@ const footerLinks = [
     { label: 'Careers', href: '/careers' },
     { label: 'Partners', href: '/partners' },
     { label: 'Case Studies', href: '/case-studies' },
-    { label: 'Changelog', href: '/changelog' },
+    { label: 'Events', href: '/events' },
+    { label: 'Press', href: '/press' },
     { label: 'Solutions', href: '/solutions' },
     { label: 'Contact', href: '/contact' },
+  ]},
+  { label: 'Trust & Legal', items: [
+    { label: 'Trust & Safety', href: '/trust-safety' },
     { label: 'Security', href: '/security' },
+    { label: 'Sustainability', href: '/sustainability' },
+    { label: 'Terms', href: '/terms' },
     { label: 'Status', href: '/status' },
   ]},
 ];
@@ -34,7 +43,7 @@ export default function Footer() {
   return (
     <footer className="px-6 md:px-12 lg:px-24 py-16 border-t border-border/20">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div>
             <Link to="/" className="font-display text-lg font-bold tracking-wider text-foreground">

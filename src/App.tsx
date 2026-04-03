@@ -25,6 +25,12 @@ import Careers from "./pages/Careers";
 import CaseStudies from "./pages/CaseStudies";
 import Partners from "./pages/Partners";
 import Changelog from "./pages/Changelog";
+import Enterprise from "./pages/Enterprise";
+import TrustSafety from "./pages/TrustSafety";
+import OpenSource from "./pages/OpenSource";
+import Events from "./pages/Events";
+import Press from "./pages/Press";
+import Sustainability from "./pages/Sustainability";
 
 const queryClient = new QueryClient();
 
@@ -56,6 +62,12 @@ const App = () => (
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/partners" element={<Partners />} />
               <Route path="/changelog" element={<Changelog />} />
+              <Route path="/enterprise" element={<Enterprise />} />
+              <Route path="/trust-safety" element={<TrustSafety />} />
+              <Route path="/open-source" element={<OpenSource />} />
+              <Route path="/events" element={<Events />} />
+              <Route path="/press" element={<Press />} />
+              <Route path="/sustainability" element={<Sustainability />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
