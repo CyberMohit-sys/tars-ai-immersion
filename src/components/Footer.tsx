@@ -15,6 +15,7 @@ const footerLinks = [
   { label: 'Developers', items: [
     { label: 'Documentation', href: '/docs' },
     { label: 'API Playground', href: '/playground' },
+    { label: 'Developer Tools', href: '/dev-tools' },
     { label: 'Open Source', href: '/open-source' },
     { label: 'Community', href: '/community' },
     { label: 'Research', href: '/research' },
@@ -35,6 +36,9 @@ const footerLinks = [
   { label: 'Trust & Legal', items: [
     { label: 'Trust & Safety', href: '/trust-safety' },
     { label: 'Security', href: '/security' },
+    { label: 'Compliance', href: '/compliance' },
+    { label: 'AI Ethics', href: '/ethics' },
+    { label: 'Accessibility', href: '/accessibility' },
     { label: 'Sustainability', href: '/sustainability' },
     { label: 'Terms', href: '/terms' },
     { label: 'Status', href: '/status' },
@@ -89,6 +93,7 @@ export default function Footer() {
             <Link to="/terms" className="hover:text-primary transition-colors">Privacy</Link>
             <Link to="/terms" className="hover:text-primary transition-colors">Terms</Link>
             <Link to="/security" className="hover:text-primary transition-colors">Security</Link>
+            <Link to="/accessibility" className="hover:text-primary transition-colors">Accessibility</Link>
             <Link to="/status" className="hover:text-primary transition-colors">Status</Link>
           </div>
         </div>
