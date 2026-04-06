@@ -1,7 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
-const TARS_URL = 'https://tars-ai-blush.vercel.app/';
+const TARS_URL = 'https://tars-ai-company.vercel.app/';
 
 export default function CallToAction() {
   const ref = useRef(null);

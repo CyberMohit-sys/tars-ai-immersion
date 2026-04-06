@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown, LogIn, LogOut, User } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/lib/auth';
 
-const TARS_URL = 'https://tars-ai-blush.vercel.app/';
+const TARS_URL = 'https://tars-ai-company.vercel.app/';
 const LINKEDIN_URL = 'https://in.linkedin.com/in/mohidul-alom-laskar-09626b320';
 const GITHUB_URL = 'https://github.com/CyberMohit-sys';
 
@@ -26,6 +26,7 @@ const navItems = [
     children: [
       { label: 'Documentation', href: '/docs' },
       { label: 'API Playground', href: '/playground' },
+      { label: 'Developer Tools', href: '/dev-tools' },
       { label: 'Open Source', href: '/open-source' },
       { label: 'Community', href: '/community' },
       { label: 'Changelog', href: '/changelog' },
@@ -42,8 +43,11 @@ const navItems = [
       { label: 'Investors', href: '/investors' },
       { label: 'Events', href: '/events' },
       { label: 'Press', href: '/press' },
+      { label: 'Ethics', href: '/ethics' },
       { label: 'Trust & Safety', href: '/trust-safety' },
       { label: 'Sustainability', href: '/sustainability' },
+      { label: 'Accessibility', href: '/accessibility' },
+      { label: 'Compliance', href: '/compliance' },
     ],
   },
   { label: 'Blog', href: '/blog' },

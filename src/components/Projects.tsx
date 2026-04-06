@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ExternalLink, Eye } from 'lucide-react';
 
-const TARS_URL = 'https://tars-ai-blush.vercel.app/';
+const TARS_URL = 'https://tars-ai-company.vercel.app/';
 const TARSVISION_URL = 'https://tarsvision.vercel.app/';
 const LIFECARE_URL = 'https://lifecareai-health-guardian.vercel.app/';
 const GITHUB_URL = 'https://github.com/CyberMohit-sys';

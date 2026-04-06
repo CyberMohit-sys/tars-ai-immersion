@@ -33,6 +33,10 @@ import Press from "./pages/Press";
 import Sustainability from "./pages/Sustainability";
 import Investors from "./pages/Investors";
 import Community from "./pages/Community";
+import Accessibility from "./pages/Accessibility";
+import Ethics from "./pages/Ethics";
+import Compliance from "./pages/Compliance";
+import DevTools from "./pages/DevTools";
 
 const queryClient = new QueryClient();
 
@@ -72,6 +76,10 @@ const App = () => (
               <Route path="/sustainability" element={<Sustainability />} />
               <Route path="/investors" element={<Investors />} />
               <Route path="/community" element={<Community />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/ethics" element={<Ethics />} />
+              <Route path="/compliance" element={<Compliance />} />
+              <Route path="/dev-tools" element={<DevTools />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
