@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown, LogIn, LogOut, User } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '@/lib/auth';
 
-const TARS_URL = 'https://tars-ai-blush.vercel.app/';
+const TARS_URL = 'https://tars-ai-company.vercel.app/';
 const LINKEDIN_URL = 'https://in.linkedin.com/in/mohidul-alom-laskar-09626b320';
 const GITHUB_URL = 'https://github.com/CyberMohit-sys';
 

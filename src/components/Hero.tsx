@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Suspense, lazy } from 'react';
 import heroBg from '@/assets/hero-bg.jpg';
 
-const TARS_URL = 'https://tars-ai-blush.vercel.app/';
+const TARS_URL = 'https://tars-ai-company.vercel.app/';
 const AISphere = lazy(() => import('./AISphere'));
 
 export default function Hero() {

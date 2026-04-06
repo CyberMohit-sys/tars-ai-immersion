@@ -5,7 +5,7 @@ const GITHUB_URL = 'https://github.com/CyberMohit-sys';
 
 const footerLinks = [
   { label: 'Products', items: [
-    { label: 'TARS AI', href: 'https://tars-ai-blush.vercel.app/', external: true },
+    { label: 'TARS AI', href: 'https://tars-ai-company.vercel.app/', external: true },
     { label: 'TARS Vision', href: 'https://tarsvision.vercel.app/', external: true },
     { label: 'Lifecare AI', href: 'https://lifecareai-health-guardian.vercel.app/', external: true },
     { label: 'Models', href: '/models' },
