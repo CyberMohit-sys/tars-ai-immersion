@@ -37,6 +37,7 @@ import Accessibility from "./pages/Accessibility";
 import Ethics from "./pages/Ethics";
 import Compliance from "./pages/Compliance";
 import DevTools from "./pages/DevTools";
+import FounderInfo from "./pages/FounderInfo";
 
 const queryClient = new QueryClient();
 
@@ -80,6 +81,7 @@ const App = () => (
               <Route path="/ethics" element={<Ethics />} />
               <Route path="/compliance" element={<Compliance />} />
               <Route path="/dev-tools" element={<DevTools />} />
+              <Route path="/founder" element={<FounderInfo />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
