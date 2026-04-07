@@ -81,6 +81,7 @@ const App = () => (
               <Route path="/ethics" element={<Ethics />} />
               <Route path="/compliance" element={<Compliance />} />
               <Route path="/dev-tools" element={<DevTools />} />
+              <Route path="/founder" element={<FounderInfo />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>
