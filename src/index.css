@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -67,11 +67,45 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(222 47% 7%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(210 100% 56% / 0.3);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(210 100% 56% / 0.5);
+  }
+
+  ::selection {
+    background: hsl(210 100% 56% / 0.3);
+    color: hsl(210 40% 98%);
+  }
 }
 
 @layer components {
   .glass-panel {
     @apply bg-glass/40 backdrop-blur-xl border border-glass-border/30 rounded-2xl;
+    background: linear-gradient(
+      135deg,
+      hsl(222 40% 10% / 0.6),
+      hsl(222 40% 10% / 0.3)
+    );
+  }
+
+  .glass-panel-solid {
+    @apply backdrop-blur-2xl border border-glass-border/40 rounded-2xl;
+    background: linear-gradient(
+      160deg,
+      hsl(222 40% 12% / 0.9),
+      hsl(222 40% 8% / 0.95)
+    );
   }
 
   .glow-blue {
@@ -89,6 +123,11 @@
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, hsl(210 100% 56%), hsl(180 100% 50%), hsl(260 80% 55%));
+  }
+
+  .text-gradient-warm {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(210 100% 66%), hsl(260 80% 65%), hsl(310 70% 55%));
   }
 
   .gradient-border {
@@ -112,12 +151,30 @@
   .btn-glow {
     @apply relative overflow-hidden px-8 py-3 rounded-xl font-display font-medium tracking-wide transition-all duration-300;
     background: linear-gradient(135deg, hsl(210 100% 56%), hsl(260 80% 55%));
-    box-shadow: 0 0 20px hsl(210 100% 56% / 0.4);
+    box-shadow: 0 0 20px hsl(210 100% 56% / 0.4), 0 4px 15px hsl(0 0% 0% / 0.3);
+  }
+
+  .btn-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, hsl(210 100% 66%), hsl(260 80% 65%));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .btn-glow:hover::before {
+    opacity: 1;
   }
 
   .btn-glow:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 40px hsl(210 100% 56% / 0.6), 0 0 80px hsl(260 80% 55% / 0.3);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 0 40px hsl(210 100% 56% / 0.6), 0 0 80px hsl(260 80% 55% / 0.3), 0 8px 30px hsl(0 0% 0% / 0.4);
+  }
+
+  .btn-glow > * {
+    position: relative;
+    z-index: 1;
   }
 
   .btn-outline-glow {
@@ -125,9 +182,10 @@
   }
 
   .btn-outline-glow:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
     border-color: hsl(210 100% 56% / 0.8);
-    box-shadow: 0 0 20px hsl(210 100% 56% / 0.3);
+    box-shadow: 0 0 20px hsl(210 100% 56% / 0.3), inset 0 0 20px hsl(210 100% 56% / 0.05);
+    background: hsl(210 100% 56% / 0.05);
   }
 
   .section-padding {
@@ -136,5 +194,81 @@
 
   .counter-glow {
     text-shadow: 0 0 20px hsl(210 100% 56% / 0.5);
+  }
+
+  /* Noise overlay for premium texture */
+  .noise-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.015;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    background-size: 128px;
+  }
+
+  /* Animated gradient line */
+  .animated-gradient-line {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(210 100% 56% / 0.5),
+      hsl(260 80% 55% / 0.3),
+      hsl(180 100% 50% / 0.5),
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: gradient-slide 3s ease-in-out infinite;
+  }
+
+  @keyframes gradient-slide {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Shimmer effect */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 40%,
+      hsl(210 100% 56% / 0.06) 45%,
+      hsl(210 100% 56% / 0.12) 50%,
+      hsl(210 100% 56% / 0.06) 55%,
+      transparent 60%
+    );
+    background-size: 200% 100%;
+    animation: shimmer-move 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+  @keyframes shimmer-move {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* Tag pill */
+  .tag-pill {
+    @apply text-xs px-3 py-1 rounded-full border font-display;
+    background: hsl(210 100% 56% / 0.08);
+    border-color: hsl(210 100% 56% / 0.2);
+    color: hsl(210 100% 56%);
+  }
+
+  /* Section divider */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      hsl(210 100% 56% / 0.2),
+      hsl(260 80% 55% / 0.15),
+      transparent
+    );
   }
 }
