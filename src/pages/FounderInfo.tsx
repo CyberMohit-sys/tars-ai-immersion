@@ -1,7 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Github, Linkedin, MapPin, Mail, Briefcase, GraduationCap, Award, Rocket, Code2, Cpu, Brain, Globe, Gamepad2, Target } from 'lucide-react';
+import { ArrowLeft, Github, Linkedin, MapPin, Download, Briefcase, GraduationCap, Award, Rocket, Code2, Cpu, Brain, Globe, Gamepad2, Target, Mail } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import mohidulImg from '@/assets/team-mohidul.png';
@@ -71,7 +71,7 @@ function SectionTitle({ icon: Icon, title, index }: { icon: React.ElementType; t
       variants={fadeUp}
       className="flex items-center gap-3 mb-8"
     >
-      <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+      <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
         <Icon className="w-5 h-5 text-primary" />
       </div>
       <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">{title}</h2>
@@ -83,19 +83,92 @@ export default function FounderInfo() {
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true });
 
+  const handleDownloadResume = () => {
+    // Create a text-based resume for download
+    const resumeContent = `
+MOHIDUL ALOM LASKAR
+Founder & CEO — TarsLabs Innovation
+AI Engineer | Generative AI Developer | IoT Developer
+
+CONTACT
+Email: contact@tarslabsinnovation.in
+Location: India
+LinkedIn: linkedin.com/in/mohidul-alom-laskar-09626b320
+GitHub: github.com/CyberMohit-sys
+Website: tarslabsinnovation.in
+
+PROFESSIONAL SUMMARY
+Certified AI & IoT Developer with hands-on expertise in Python, Generative AI, Agentic AI systems, and smart IoT architectures. Trained through industry-recognized programs authorized by IIT Guwahati, IIT Bombay, and NIELIT.
+
+TECHNICAL SKILLS
+• Languages: Python, Bash
+• AI/ML: Machine Learning, Generative AI, Agentic AI Systems, LLM Integration
+• Prompt Engineering: Prompt Design, Chain-of-Thought, Few-Shot Prompting, RAG Concepts
+• IoT: IoT Architecture, Smart System Design, Sensor Integration, Edge Computing
+• Tools & APIs: REST APIs, OpenAI API, Hugging Face, Supabase, WebRTC
+• Frontend: React, TypeScript, Tailwind CSS, shadcn/ui, Vite
+
+CERTIFICATIONS
+• O Level – Internet of Things and its Application (IoT) — NIELIT
+• Certificate Course in AI & Machine Learning using Python — NIELIT
+• Programming with Generative AI — IIT Guwahati (via Coursera)
+• Introduction to Internet of Things — IIT Bombay (via Coursera)
+• Introduction to Agentic AI — NIELIT
+• DEEPCRAFT™ Studio – Infineon Tech Champion Program — NIELIT
+• CCC – Course on Computer Concepts — NIELIT
+• Machine Learning for All — University of London (via Coursera)
+
+PROJECTS
+1. TARS AI — Multi-Feature AI Platform
+   Full-stack AI platform with conversational assistant, Gemini-powered image generation, Google OAuth, Supabase auth.
+   Tech: React, TypeScript, Vite, Tailwind CSS, Supabase, Google Gemini API, OpenAI API
+
+2. Lifecare AI – Health Guardian
+   PWA with AI symptom analysis, visual diagnosis, telemedicine (WebRTC), multi-language support.
+   Tech: React, TypeScript, Supabase, WebRTC, Framer Motion
+
+3. Gesture Controlled Virtual Mouse
+   MediaPipe CNN hand tracking for cursor control, clicks, scrolling, voice assistant.
+   Tech: Python, MediaPipe, OpenCV, CNN, PyAudio
+
+4. NCMT Global Elevation
+   Professional web platform for NCMT UAE training programs.
+   Tech: React, Vite, Tailwind CSS
+
+5. Bharat Insights Hub
+   Open government data visualization platform with interactive charts.
+   Tech: React, TypeScript, Tailwind CSS
+
+HACKATHONS
+• DUHacks 5.0 — GDG on-Campus, DDU (Jan 2026) — 36-hour National Level Hackathon
+
+CAREER OBJECTIVE
+To contribute as an entry-level AI Engineer or AI+IoT Developer, applying expertise in Generative AI, agentic systems, and smart IoT design to build intelligent, real-world solutions.
+    `.trim();
+
+    const blob = new Blob([resumeContent], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Mohidul_Alom_Laskar_Resume.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background noise-overlay">
       <Navbar />
 
       {/* Hero */}
       <section ref={heroRef} className="pt-32 pb-16 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary/6 blur-[200px]" />
-          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-secondary/5 blur-[150px]" />
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-[200px]" style={{ background: 'radial-gradient(circle, hsl(210 100% 56% / 0.08), hsl(260 80% 55% / 0.04), transparent)' }} />
         </div>
 
         <div className="max-w-5xl mx-auto px-6 relative">
-          <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 text-sm">
+          <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 text-sm font-display">
             <ArrowLeft className="w-4 h-4" /> Back to Home
           </Link>
 
@@ -109,11 +182,13 @@ export default function FounderInfo() {
             <motion.div
               className="w-40 h-40 rounded-2xl border-2 border-primary/30 overflow-hidden shrink-0 relative"
               style={{ boxShadow: '0 0 80px hsl(210 100% 56% / 0.3), 0 0 140px hsl(260 80% 55% / 0.15)' }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             >
               <img src={mohidulImg} alt="Mohidul Alom Laskar" className="w-full h-full object-cover object-top" />
             </motion.div>
 
-            <div className="text-center md:text-left">
+            <div className="text-center md:text-left flex-1">
               <p className="text-primary font-display text-xs tracking-[0.3em] uppercase mb-2">Founder & CEO</p>
               <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-2">Mohidul Alom Laskar</h1>
               <p className="text-muted-foreground text-lg mb-3">AI Engineer • Generative AI Developer • IoT Developer</p>
@@ -122,14 +197,24 @@ export default function FounderInfo() {
                 <span>India • Open to Remote & Hybrid Roles</span>
               </div>
 
-              <div className="flex items-center justify-center md:justify-start gap-3">
+              <div className="flex items-center justify-center md:justify-start gap-3 flex-wrap">
                 <a href="https://in.linkedin.com/in/mohidul-alom-laskar-09626b320" target="_blank" rel="noopener noreferrer"
                   className="btn-glow text-primary-foreground text-sm inline-flex items-center gap-2">
-                  <Linkedin className="w-4 h-4" /> LinkedIn
+                  <Linkedin className="w-4 h-4" /> <span>LinkedIn</span>
                 </a>
                 <a href="https://github.com/CyberMohit-sys" target="_blank" rel="noopener noreferrer"
                   className="btn-outline-glow text-sm inline-flex items-center gap-2">
                   <Github className="w-4 h-4" /> GitHub
+                </a>
+                <button
+                  onClick={handleDownloadResume}
+                  className="btn-outline-glow text-sm inline-flex items-center gap-2 border-accent/40 hover:border-accent/80 hover:shadow-[0_0_20px_hsl(180_100%_50%/0.3)]"
+                >
+                  <Download className="w-4 h-4 text-accent" /> Download Resume
+                </button>
+                <a href="mailto:contact@tarslabsinnovation.in"
+                  className="btn-outline-glow text-sm inline-flex items-center gap-2">
+                  <Mail className="w-4 h-4" /> Contact
                 </a>
               </div>
             </div>
@@ -142,7 +227,7 @@ export default function FounderInfo() {
         <div className="max-w-5xl mx-auto">
           <SectionTitle icon={Briefcase} title="Professional Summary" index={0} />
           <motion.div
-            className="glass-panel gradient-border p-6 md:p-8"
+            className="glass-panel gradient-border p-6 md:p-8 shimmer"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -163,7 +248,7 @@ export default function FounderInfo() {
             {skills.map((skill, i) => (
               <motion.div
                 key={skill.category}
-                className="glass-panel gradient-border p-5"
+                className="glass-panel gradient-border p-5 group hover:shadow-[0_0_30px_hsl(210_100%_56%/0.1)] transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -175,9 +260,7 @@ export default function FounderInfo() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {skill.items.map((item) => (
-                    <span key={item} className="text-xs px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
-                      {item}
-                    </span>
+                    <span key={item} className="tag-pill">{item}</span>
                   ))}
                 </div>
               </motion.div>
@@ -194,7 +277,7 @@ export default function FounderInfo() {
             {certifications.map((cert, i) => (
               <motion.div
                 key={cert.name}
-                className="glass-panel gradient-border p-4 md:p-5 flex flex-col md:flex-row md:items-center justify-between gap-2"
+                className="glass-panel gradient-border p-4 md:p-5 flex flex-col md:flex-row md:items-center justify-between gap-2 hover:bg-muted/10 transition-colors"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -204,7 +287,7 @@ export default function FounderInfo() {
                   <h3 className="font-display text-sm font-semibold text-foreground">{cert.name}</h3>
                   <p className="text-muted-foreground text-xs mt-1">{cert.org}</p>
                 </div>
-                <span className="text-xs px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20 shrink-0 w-fit">
+                <span className="text-xs px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/20 shrink-0 w-fit font-display">
                   {cert.date}
                 </span>
               </motion.div>
@@ -218,7 +301,7 @@ export default function FounderInfo() {
         <div className="max-w-5xl mx-auto">
           <SectionTitle icon={Gamepad2} title="Hackathons & Competitions" index={3} />
           <motion.div
-            className="glass-panel gradient-border p-6 md:p-8"
+            className="glass-panel gradient-border p-6 md:p-8 shimmer"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -241,7 +324,7 @@ export default function FounderInfo() {
             {projects.map((project, i) => (
               <motion.div
                 key={project.title}
-                className="glass-panel gradient-border p-6 md:p-8 group hover:border-primary/30 transition-colors"
+                className="glass-panel gradient-border p-6 md:p-8 group hover:shadow-[0_0_40px_hsl(210_100%_56%/0.1)] transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -253,7 +336,7 @@ export default function FounderInfo() {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((t) => (
-                    <span key={t} className="text-xs px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">
+                    <span key={t} className="text-xs px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20 font-display">
                       {t}
                     </span>
                   ))}
@@ -265,7 +348,7 @@ export default function FounderInfo() {
       </section>
 
       {/* Career Objective */}
-      <section className="py-12 px-6">
+      <section className="py-12 px-6 pb-20">
         <div className="max-w-5xl mx-auto">
           <SectionTitle icon={GraduationCap} title="Career Objective" index={5} />
           <motion.div
